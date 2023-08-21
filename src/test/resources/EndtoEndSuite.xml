@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EndToEndSuite">
+    <test name="SaucedemoExerciseFlowTests">
+        <classes>
+            <class name="tests.SaucedemoExerciseFlowTest"/>
+        </classes>
+    </test>
+</suite>

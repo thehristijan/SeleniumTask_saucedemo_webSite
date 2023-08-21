@@ -1,6 +1,6 @@
 package pages;
 
-import model.Item;
+import dto.Item;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +27,6 @@ public class InventoryPage extends BasePage {
     By cartButton = By.id("shopping_cart_container");
     By addToCartButton = By.xpath(".//button[contains(text(), 'Add to cart')]");
     By dropdownFilter = By.className("product_sort_container");
-    WebElement dropdownElement = driver.findElement(dropdownFilter);
     By inventoryItems = By.className("inventory_item");
 
     public List<WebElement> inventoryItemList() {
@@ -69,7 +68,7 @@ public class InventoryPage extends BasePage {
     }
 
     public void sortLowToHighByFilter() {
-
+        WebElement dropdownElement = driver.findElement(dropdownFilter);
         Select dropdown = new Select(dropdownElement);
         dropdown.selectByVisibleText("Price (low to high)");
 

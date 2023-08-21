@@ -5,16 +5,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseTests {
+public class BaseTest {
 
-    public WebDriver driver;
-    private String firefoxdriver = "webdriver.gecko.driver";
-    private String driverFullPath = "/Users/v-hdespotovski/GitProjects/Selenium_FrontEnd/src/test/drivers/geckodriver";
-
+    public static WebDriver driver;
 
     @BeforeClass
     public void setup() {
-        System.setProperty(firefoxdriver, driverFullPath);
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
@@ -24,4 +20,5 @@ public class BaseTests {
     public void teardown() {
         driver.quit();
     }
+
 }

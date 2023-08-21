@@ -41,9 +41,4 @@ public class BasePage {
 
     }
 
-    protected void javascriptClick(By locator) {
-        WebElement el = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", el);
-    }
-
 }

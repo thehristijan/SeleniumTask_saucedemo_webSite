@@ -26,5 +26,4 @@ public class CartPage extends BasePage {
             logger.info("Cart is empty!");
         }
     }
-
 }

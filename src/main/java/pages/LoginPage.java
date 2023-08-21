@@ -10,7 +10,6 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-
     String baseURL = "https://www.saucedemo.com/";
 
     public LoginPage openSauceDemoWebPage() {
