@@ -39,14 +39,14 @@ public class SaucedemoExerciseFlowTest extends BaseTest {
     }
 
     @Test(dependsOnMethods = "verifyNumberOfItemsInInventory")
-    public void selectAboutAndAcceptCookies() throws InterruptedException {
+    public void selectAboutAndAcceptCookies(){
         inventoryPage.clickAbout();
         aboutPage.clickAcceptCookieButton();
         driver.navigate().back();
     }
 
     @Test(dependsOnMethods = "selectAboutAndAcceptCookies")
-    public void saveItemsInFileAndSortThemByPrice() throws InterruptedException {
+    public void saveItemsInFileAndSortThemByPrice(){
         inventoryPage.sortByPrIceLowToHigh();
         inventoryPage.saveToFile();
         inventoryPage.sortLowToHighByFilter();
